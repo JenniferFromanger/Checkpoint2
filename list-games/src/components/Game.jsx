@@ -10,10 +10,15 @@ export default function Game(props) {
       </div>{" "}
       <div className="info">
         <p>Released on {props.released}</p>
+        <p>Rating {props.rating}</p>
         <p>Listen the clip's game</p>
         <iframe src={props.clip.clip} title={props.id} />
         <p>
-          <button value={props.id} onClick={props.filteredGames}>
+          <button
+            onClick={() => {
+              props.deleteGames(props.id);
+            }}
+          >
             Delete Game
           </button>
         </p>
