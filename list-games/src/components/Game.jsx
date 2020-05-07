@@ -1,7 +1,7 @@
 import React from "react";
 import "./Game.scss";
 
-export default function Game(props) {
+export default function Game(props, { filteredGames }) {
   return (
     <div className="contain">
       <div className="title">
@@ -13,7 +13,9 @@ export default function Game(props) {
         <p>Listen the clip's game</p>
         <iframe src={props.clip.clip} title={props.id} />
         <p>
-          <button>Delete Game</button>
+          <button value={props.id} onClick={filteredGames}>
+            Delete Game
+          </button>
         </p>
       </div>
     </div>
