@@ -2,13 +2,18 @@ h2 {
   font-size: 30px;
   color: rgb(33, 30, 48);
 }
-.align {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 
 img {
   width: 50%;
   box-shadow: 10px 10px 25px #333333;
+}
+
+.contain {
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+.title {
+  width: 65%;
 }

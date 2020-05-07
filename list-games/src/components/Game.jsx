@@ -4,16 +4,17 @@ import "./Game.scss";
 export default function Game(props) {
   return (
     <div className="contain">
-      <div className="align">
+      <div className="title">
         <h2>{props.name}</h2>
+        <img src={props.background_image} alt={props.name} />
+      </div>{" "}
+      <div className="info">
         <p>Released on {props.released}</p>
-      </div>
-      <div className="align">
-        <img src={props.background_image} alt={props.name} />{" "}
-        <div>
-          <p>Listen the clip's game</p>
-          <iframe src={props.clip.clip} title={props.id} />
-        </div>
+        <p>Listen the clip's game</p>
+        <iframe src={props.clip.clip} title={props.id} />
+        <p>
+          <button>Delete Game</button>
+        </p>
       </div>
     </div>
   );
