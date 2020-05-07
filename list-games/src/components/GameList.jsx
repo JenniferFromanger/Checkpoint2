@@ -17,14 +17,16 @@ export default function GameList() {
   }, []);
 
   const filteredGames = (e) => {
-    return games.filter((game) => {
-      return game.id !== e.target.value;
+    const gameId = Number(e.target.value);
+    const filterGames = games.filter((game) => {
+      return game.id !== gameId;
     });
+    setGames(filterGames);
   };
   return (
     <div>
       {games.map((game) => (
-        <Game key={game.id} {...game} onClick={filteredGames} />
+        <Game key={game.id} {...game} filteredGames={filteredGames} />
       ))}
     </div>
   );
