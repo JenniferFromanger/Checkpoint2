@@ -28,7 +28,7 @@ export default function Game(props) {
         <ul>
           <li>
             <Link to={`/jeu/screenshots/${props.id}`}>
-              Game List Screenshots
+              <p>Game List Screenshots</p>
             </Link>
           </li>
         </ul>

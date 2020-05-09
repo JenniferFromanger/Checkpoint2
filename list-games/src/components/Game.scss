@@ -10,12 +10,12 @@ img {
 
 .contain {
   display: flex;
-  margin: auto;
+  justify-content: space-around;
   align-items: center;
 }
 
 .title {
-  width: 65%;
+  width: 55%;
 }
 
 button {
@@ -33,4 +33,12 @@ button:hover {
 
 video {
   width: 40%;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  width: 30%;
 }
