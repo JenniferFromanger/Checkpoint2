@@ -44,7 +44,7 @@ export default function GameList() {
   return (
     <div>
       <button onClick={() => filterBestGame()}>
-        {toggleBestGame ? "All Games" : "Best Games"}
+        {!toggleBestGame ? "All Games" : "Best Games"}
       </button>
       {games.map((game) => (
         <Game key={game.id} {...game} deleteGames={deleteGames} />

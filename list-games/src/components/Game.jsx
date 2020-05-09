@@ -12,7 +12,7 @@ export default function Game(props) {
         <p>Released on {props.released}</p>
         <p>Rating {props.rating}</p>
         <p>Listen the clip's game</p>
-        <iframe src={props.clip.clip} title={props.id} />
+        <video src={props.clip.clip} title={props.id} muted></video>
         <p>
           <button
             onClick={() => {
