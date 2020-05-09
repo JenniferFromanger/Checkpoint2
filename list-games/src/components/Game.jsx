@@ -1,5 +1,6 @@
 import React from "react";
 import "./Game.scss";
+import { Link } from "react-router-dom";
 
 export default function Game(props) {
   return (
@@ -23,6 +24,15 @@ export default function Game(props) {
           </button>
         </p>
       </div>
+      <nav>
+        <ul>
+          <li>
+            <Link to={`/jeu/screenshots/${props.id}`}>
+              Game List Screenshots
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }

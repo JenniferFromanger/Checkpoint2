@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Game from "./Game";
+import ScreenShots from "./ScreenShots";
 import axios from "axios";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default function GameList() {
   const [games, setGames] = useState([]);
@@ -42,13 +44,22 @@ export default function GameList() {
   };
 
   return (
-    <div>
-      <button onClick={() => filterBestGame()}>
-        {!toggleBestGame ? "All Games" : "Best Games"}
-      </button>
-      {games.map((game) => (
-        <Game key={game.id} {...game} deleteGames={deleteGames} />
-      ))}
-    </div>
+    <Router>
+      <div>
+        <button onClick={() => filterBestGame()}>
+          {!toggleBestGame ? "All Games" : "Best Games"}
+        </button>
+        <Switch>
+          <Route exact path="/">
+            {games.map((game) => (
+              <Game key={game.id} {...game} deleteGames={deleteGames} />
+            ))}
+          </Route>
+          <Route path="/jeu/screenshots/:number">
+            <ScreenShots games={games} />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
