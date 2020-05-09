@@ -19,7 +19,7 @@ export default function ScreenShots({ games }) {
             />
           ))}
           <Link to="/">
-            <p>Game List Homepage</p>
+            <p className="link">Game List Homepage</p>
           </Link>
         </div>
       ))}

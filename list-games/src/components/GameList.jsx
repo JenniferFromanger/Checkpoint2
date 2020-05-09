@@ -47,7 +47,7 @@ export default function GameList() {
     <Router>
       <div>
         <button onClick={() => filterBestGame()}>
-          {!toggleBestGame ? "All Games" : "Best Games"}
+          {toggleBestGame ? "All Games" : "Best Games"}
         </button>
         <Switch>
           <Route exact path="/">
